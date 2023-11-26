@@ -1,0 +1,88 @@
+:root{
+  --bg-color: #282828;
+  --bg-team-color: #fefefe;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  background-color: var(--bg-color);
+}
+
+body{    
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding-top: 32px;
+  width: 100vw;
+}
+
+#resultadoWrapper{
+  color: var(--bg-team-color);
+}
+
+#resultadoWrapper.Apple{
+  color: greenyellow;
+}
+
+#resultadoWrapper.Tomato{
+  color: red;
+}
+
+#mainWrapper{
+  align-items: center;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: center;
+  width: 80%;
+  background-color: #3c3c3c;
+}
+
+#percentageWrapper{
+  color: var(--bg-team-color);
+  font-size: 1.3rem;
+}
+
+/* Animacion */
+#animationWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -9999;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animationElement {
+  width: 10px;
+  height: 10px;
+  font-size: 3rem;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+}
+
+@keyframes explodeAnimation {
+  0%{
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(var(--translate-x), var(--translate-y));
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
